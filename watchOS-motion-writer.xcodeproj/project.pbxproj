@@ -24,6 +24,8 @@
 		E35FFEAB252CBC3E00A491BE /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35FFEAA252CBC3E00A491BE /* NotificationController.swift */; };
 		E35FFEAD252CBC3E00A491BE /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35FFEAC252CBC3E00A491BE /* ComplicationController.swift */; };
 		E35FFEAF252CBC3E00A491BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E35FFEAE252CBC3E00A491BE /* Assets.xcassets */; };
+		E35FFF11252CD15400A491BE /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E35FFF10252CD15400A491BE /* HealthKit.framework */; };
+		E35FFF22252D6C7400A491BE /* MotionWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35FFF21252D6C7400A491BE /* MotionWriter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,9 @@
 		E35FFEAE252CBC3E00A491BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E35FFEB0252CBC3E00A491BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E35FFEB1252CBC3E00A491BE /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		E35FFF0E252CD15400A491BE /* watchOS-motion-writer WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "watchOS-motion-writer WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		E35FFF10252CD15400A491BE /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		E35FFF21252D6C7400A491BE /* MotionWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionWriter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E35FFF11252CD15400A491BE /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +158,7 @@
 				E35FFE96252CBC3D00A491BE /* watchOS-motion-writer WatchKit App */,
 				E35FFEA5252CBC3E00A491BE /* watchOS-motion-writer WatchKit Extension */,
 				E35FFE69252CBC3C00A491BE /* Products */,
+				E35FFF0F252CD15400A491BE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,6 +219,8 @@
 		E35FFEA5252CBC3E00A491BE /* watchOS-motion-writer WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				E35FFF21252D6C7400A491BE /* MotionWriter.swift */,
+				E35FFF0E252CD15400A491BE /* watchOS-motion-writer WatchKit Extension.entitlements */,
 				E35FFEA6252CBC3E00A491BE /* InterfaceController.swift */,
 				E35FFEA8252CBC3E00A491BE /* ExtensionDelegate.swift */,
 				E35FFEAA252CBC3E00A491BE /* NotificationController.swift */,
@@ -221,6 +230,14 @@
 				E35FFEB1252CBC3E00A491BE /* PushNotificationPayload.apns */,
 			);
 			path = "watchOS-motion-writer WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		E35FFF0F252CD15400A491BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E35FFF10252CD15400A491BE /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,6 +459,7 @@
 			files = (
 				E35FFEAB252CBC3E00A491BE /* NotificationController.swift in Sources */,
 				E35FFEAD252CBC3E00A491BE /* ComplicationController.swift in Sources */,
+				E35FFF22252D6C7400A491BE /* MotionWriter.swift in Sources */,
 				E35FFEA9252CBC3E00A491BE /* ExtensionDelegate.swift in Sources */,
 				E35FFEA7252CBC3E00A491BE /* InterfaceController.swift in Sources */,
 			);
@@ -615,6 +633,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "watchOS-motion-writer WatchKit Extension/watchOS-motion-writer WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5QJR7K89TS;
 				INFOPLIST_FILE = "watchOS-motion-writer WatchKit Extension/Info.plist";
@@ -637,6 +656,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "watchOS-motion-writer WatchKit Extension/watchOS-motion-writer WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5QJR7K89TS;
 				INFOPLIST_FILE = "watchOS-motion-writer WatchKit Extension/Info.plist";
